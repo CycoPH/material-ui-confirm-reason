@@ -141,6 +141,22 @@ const ReasonWithCustomCheckErrorPreSet = () => {
 	);
   };
 
+const ReasonWithAutoComplete = () => {
+  const confirm = useConfirm();
+  return (
+    <Button onClick={() => {
+      confirm({
+        confirmationText: "Delete",
+        reason: true,
+        reasonTextProps: {inputProps: {autoComplete: "on"}}
+      })
+        .then(confirmationAction);
+    }}>
+      Click
+    </Button>
+  );
+};
+
 storiesOf('Confirmation dialog', module)
   .addDecorator(getStory => (
     <ConfirmProvider>{getStory()}</ConfirmProvider>
@@ -154,4 +170,5 @@ storiesOf('Confirmation dialog', module)
   .add('basic with reason', () => <BasicWithReason />)
   .add('reason with check function', () => <ReasonWithCustomCheck />)
   .add('reason with check function and preset error', () => <ReasonWithCustomCheckErrorPreSet />)
+  .add('reason with auto complete in text field', () => <ReasonWithAutoComplete />)
   ;

@@ -1,6 +1,6 @@
 {
   "name": "material-ui-confirm-reason",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Higher order component for straightforward use of @material-ui/core confirmation dialogs.",
   "keywords": [
     "Material UI",
@@ -39,7 +39,7 @@
     "@testing-library/react": "^10.0.2",
     "babel-loader": "^8.1.0",
     "coveralls": "^3.0.11",
-    "jest": "^25.2.6",
+    "jest": "^25.2.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "rollup": "^2.3.2",

@@ -32,13 +32,16 @@ const ConfirmationDialog = ({ open, options, onCancel, onConfirm }) => {
         )}
 	    {reason && (
 		  <TextField 
-			  error={reason.error} 
-			  helperText={reason.errorMsg} 
-			  autoFocus 
-			  margin="dense" 
-			  label="Reason" 
-			  fullWidth 
-			  id="material-ui-confirm-reason" 
+			  error={reason.error}
+			  helperText={reason.errorMsg}
+			  autoFocus
+			  margin="dense"
+			  label="Reason"
+			  fullWidth
+			  id="material-ui-confirm-reason"
+        inputProps={{
+          autoComplete: "off",
+        }}
 			  {...reasonTextProps}
 		  />
 	    )}
