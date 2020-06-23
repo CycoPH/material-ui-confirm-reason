@@ -3,13 +3,14 @@ import { DialogProps } from '@material-ui/core/Dialog';
 import { ButtonProps } from '@material-ui/core/Button';
 
 export interface ConfirmOptions {
-  title?: string;
-  description?: string;
-  confirmationText?: string;
-  cancellationText?: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
+  confirmationText?: React.ReactNode;
+  cancellationText?: React.ReactNode;
   dialogProps?: DialogProps;
   confirmationButtonProps?: ButtonProps;
   cancellationButtonProps?: ButtonProps;
+  reasonTextProps?: TextFieldProps;
 }
 
 export interface ConfirmProviderProps {
